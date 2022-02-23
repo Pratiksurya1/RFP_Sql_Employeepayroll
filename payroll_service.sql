@@ -38,3 +38,12 @@ SELECT * FROM employee_payroll
 SELECT gender,COUNT(*) FROM employee_payroll GROUP BY gender
 
 SELECT gender,(*) FROM employee_payroll WHERE gender IN('F','M') GROUP BY gender
+
+-----UC7
+SELECT gender, SUM(salary) AS sum, AVG(salary) AS avg, MAX(salary) AS max,MIN(salary) AS min,COUNT(salary) AS count FROM employee_payroll GROUP BY gender
+
+
+-----UC8
+ALTER TABLE employee_payroll ADD PRIMARY KEY(id) 
+
+ALTER TABLE employee_payroll ADD phone varchar(15),address varchar(50),dept varchar(20)default 'other' NOT NULL
