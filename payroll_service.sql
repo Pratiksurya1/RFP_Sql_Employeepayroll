@@ -38,3 +38,7 @@ SELECT * FROM employee_payroll
 SELECT gender,COUNT(*) FROM employee_payroll GROUP BY gender
 
 SELECT gender,(*) FROM employee_payroll WHERE gender IN('F','M') GROUP BY gender
+
+-----UC7
+SELECT gender, SUM(salary) AS sum, AVG(salary) AS avg, MAX(salary) AS max,MIN(salary) AS min,COUNT(salary) AS count FROM employee_payroll GROUP BY gender
+
