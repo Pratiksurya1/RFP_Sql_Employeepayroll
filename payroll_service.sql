@@ -81,3 +81,52 @@ INSERT INTO employee_payroll VALUES(
 'C-546',
 'Marketing'
 )
+
+-----Uc11
+
+CREATE TABLE employee_info(
+emp_id int identity(1,1)PRIMARY KEY,
+emp_name varchar(50),
+start_date date,
+gender char(1),
+phone varchar(13),
+address nvarchar(40)
+)
+
+CREATE TABLE payroll_info(
+empid int FOREIGN KEY REFERENCES employee_info(emp_id) UNIQUE NOT NULL,
+basic_pay float(7),
+deductions float(7),
+taxable_pay float(7),
+incometax float(7),
+net_pay float(7)
+)
+
+CREATE TABLE dept_info(
+emp_id int FOREIGN KEY REFERENCES employee_info(emp_id),
+dept varchar(20)
+)
+
+INSERT INTO employee_info VALUES(
+'rohit sharma',
+'2021-08-25',
+'M',
+'8745632952',
+'P-452'
+)
+
+INSERT INTO payroll_info VALUES(
+1,
+30000,
+2000,
+1000,
+200,
+18000
+)
+
+INSERT INTO dept_info VALUES(
+1,
+'Sales'
+)
+
+
