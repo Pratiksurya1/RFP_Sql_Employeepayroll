@@ -129,4 +129,13 @@ INSERT INTO dept_info VALUES(
 'Sales'
 )
 
+-----UC12
+
+SELECT * FROM employee_info,payroll_info,dept_info
+
+SELECT * FROM employee_info,payroll_info,dept_info WHERE emp_name='rohit sharma'
+
+SELECT * FROM employee_info,payroll_info,dept_info WHERE start_date BETWEEN CAST('2018-01-01'AS date) AND GETDATE();
+
+SELECT gender, SUM(basic_pay) AS sum, AVG(basic_pay) AS avg, MAX(basic_pay) AS max,MIN(basic_pay) AS min,COUNT(basic_pay) AS count FROM employee_info,payroll_info GROUP BY gender
 
