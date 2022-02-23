@@ -52,3 +52,32 @@ ALTER TABLE employee_payroll ADD phone varchar(15),address varchar(50),dept varc
 SELECT * FROM employee_payroll
 
 ALTER TABLE employee_payroll ADD basic_pay money(7),deductions money(7),taxable_pay money(7),incometax money(7),net_pay money(7)
+
+-----UC10
+INSERT INTO employee_payroll VALUES(
+'sonam',
+'2021-08-25',
+'F',
+30000,
+2000,
+1000,
+200,
+18000,
+'7892564315',
+'C-546',
+'Sales'
+)
+
+INSERT INTO employee_payroll VALUES(
+'sonam',
+'2021-08-25',
+'F',
+30000,
+2000,
+1000,
+200,
+18000,
+'7892564315',
+'C-546',
+'Marketing'
+)
