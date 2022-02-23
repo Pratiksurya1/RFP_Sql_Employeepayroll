@@ -19,3 +19,11 @@ INSERT INTO employee_payroll(name,salary,start_date)VALUES('virat',30000,'2021-1
 
 -- Uc 4
 SELECT * FROM employee_payroll
+
+-- Uc5
+
+SELECT * FROM employee_payroll WHERE name='rohit'
+
+SELECT * FROM employee_payroll WHERE start_date BETWEEN '2022-01-01' AND '2022-02-08'
+
+SELECT * FROM employee_payroll WHERE start_date BETWEEN CAST('2018-01-01'AS date) AND GETDATE();
